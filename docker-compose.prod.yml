@@ -12,6 +12,8 @@ services:
     ports:
       - "3002:3000"
     restart: always
+    networks:
+      - prod_net
 
   postgres:
     image: postgres:17
@@ -30,12 +32,22 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+    networks:
+      - prod_net
+
   pgadmin:
     image: dpage/pgadmin4
+    container_name: pgadmin_prod
     environment:
       PGADMIN_DEFAULT_EMAIL: root@admin.com
       PGADMIN_DEFAULT_PASSWORD: root
     ports: 
       - "5052:80"
+    networks:
+      - prod_net
+
 volumes:
   postgres_prod_data:
+
+networks:
+  prod_net:
