@@ -1,7 +1,7 @@
-import { 
-    Column, 
-    Entity, 
-    PrimaryGeneratedColumn, 
+import {
+    Column,
+    Entity,
+    PrimaryGeneratedColumn,
 } from 'typeorm';
 
 @Entity()
@@ -10,20 +10,20 @@ export class User {
     id: number;
 
     @Column({ type: 'varchar', length: 255 })
-    name;
+    name: string;
 
     @Column({ type: 'varchar', length: 255 })
-    lastName;
+    lastName: string;
 
     @Column({ type: 'varchar', length: 255 })
-    docType;
+    docType: string;
 
     @Column({ type: 'varchar', length: 255 })
-    docNumber;
+    docNumber: string;
 
     @Column({ type: 'varchar', length: 55 })
-    miTest;
+    miTest: string;
 
     @Column({ type: 'varchar', length: 255 })
-    miTest2;
+    miTest2: string;
 }

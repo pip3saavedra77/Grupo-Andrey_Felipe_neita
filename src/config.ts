@@ -14,4 +14,4 @@ export default registerAs('config', () => {
             host: process.env.POSTGRES_HOST,
         }
     }
-});
+})

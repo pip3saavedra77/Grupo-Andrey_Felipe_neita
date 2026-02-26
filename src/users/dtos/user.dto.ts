@@ -1,9 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { IsString, IsNotEmpty } from "class-validator";
 import { PartialType, ApiProperty } from "@nestjs/swagger";
-import { Type } from "class-transformer";
 
-export class CreateUserDto {   
+export class CreateUserDto {
     @IsString()
     @IsNotEmpty()
     @ApiProperty()
@@ -34,4 +33,4 @@ export class CreateUserDto {
     @ApiProperty()
     readonly miTest2: string;
 }
-export class UpdateUserDto extends PartialType(CreateUserDto){}
+export class UpdateUserDto extends PartialType(CreateUserDto) { }
